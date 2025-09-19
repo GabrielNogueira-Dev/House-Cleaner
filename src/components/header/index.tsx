@@ -20,17 +20,21 @@ export function Header(){
 
     },[top])
 
+
     return(
         <header className={`${styles.header} ${!top ? styles.fixed : styles.background}`}>
-           <div className= {styles.container}>
+          
+          <div className= {styles.container}>
+
             <div className={styles.content}>
+
                 <div className={styles.contentLogo}>
                     <Link href="/">
-                        Cleaner+
-                    </Link>
+                      Mr. Cleaner
+                    </Link><strong>🧹</strong>
                 </div>
 
-                <nav>
+                <nav className={styles.nav}>
                     <Link href="/">
                     Home
                     </Link>
@@ -38,7 +42,7 @@ export function Header(){
                     Serviços
                     </Link>
                     <Link href="/#contatos">
-                    Home
+                    Contatos
                     </Link>
                 </nav>
 

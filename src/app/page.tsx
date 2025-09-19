@@ -1,19 +1,19 @@
+import { Submenu } from "@/components/home/submenu";
+import { getDataHome } from "@/utils/actions/get-data";
+import { HomeProps } from "@/utils/home.type";
+import { Hero } from "@/components/hero";
 
-export default function Home() {
+export default async function Home() {
+  const {object}: HomeProps = await getDataHome()
+//Ja direciona o obect da api que estaria o data.object
+//console.log(data.object.metadata.heading) por exemplo
+
+
+
   return (
         <main>
-        <div style={{width: "100%", height: 600, backgroundColor: "#121212", marginBottom: 24 }}>                  
-            <h1>teste H</h1>
-        </div>
-
-        <div style={{width: "100%", height: 600, backgroundColor: "green", marginBottom: 24 }}>                  
-            <h1>teste H</h1>
-        </div>
-
-        <div style={{width: "100%", height: 600, backgroundColor: "green", marginBottom: 24 }}>                  
-            <h1>teste H</h1>
-        </div>
-
+       <Submenu/>
+        <Hero/>
          </main>
   );
 }
