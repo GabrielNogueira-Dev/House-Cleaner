@@ -3,12 +3,12 @@
     width: 100%;
     z-index: 99;
     position: fixed;
-    background-color: #fff;
+    background-color: rgb(211, 207, 207);
 }
 
 .fixed{
     position: fixed;
-    background-color: rgba(252,252,252,0.73);
+    background-color: rgb(211, 207, 207);
      -webkit-box-shadow: 0px 6px 20px -12px rgba(0,0,0,0.06);
      -moz-box-shadow: 0px 6px 20px -12px rgba(0,0,0,0.06);
      box-shadow: 0px 6px 20px -12px rgba(0,0,0,0.06);
@@ -16,8 +16,7 @@
 }
 
 .background{
-    background-color: #fff;
-
+    background-color: rgba(29, 121, 57, 0.738);
 }
 
 .container{
@@ -36,7 +35,7 @@
 .contentLogo a{
     font-weight: bold;
     font-size: 22px;
-    color: rgba(23, 186, 39, 0.666);
+    color:white;
    
     
 }
@@ -63,8 +62,8 @@ a:hover{
 @media (min-width: 640px){
     .contentLogo a{
     font-weight: bold;
-    font-size: 28px;
-    color: rgba(23, 186, 39, 0.666);
+    font-size: 29px;
+    color: white;
   border-radius: 4px;
 }
 

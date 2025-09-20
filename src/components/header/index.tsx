@@ -30,7 +30,7 @@ export function Header(){
 
                 <div className={styles.contentLogo}>
                     <Link href="/">
-                      Mr. Cleaner
+                      Mrs. Cleaning
                     </Link><strong>🧹</strong>
                 </div>
 
@@ -39,10 +39,10 @@ export function Header(){
                     Home
                     </Link>
                     <Link href="/#servicos">
-                    Serviços
+                    Services
                     </Link>
                     <Link href="/#contatos">
-                    Contatos
+                    Contacts
                     </Link>
                 </nav>
 

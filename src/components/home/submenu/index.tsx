@@ -43,12 +43,12 @@ export function Submenu(){
 
             <li>
                 <Link href="/post/pagina-1">
-                Página 1
+                Page 1
                 </Link>
             </li>
             <li>
                 <Link href="/post/pagina-2">
-                Página 2
+                Page 2
                 </Link>
             </li>
         </ul>

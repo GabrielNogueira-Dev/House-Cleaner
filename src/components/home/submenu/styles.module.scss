@@ -3,6 +3,7 @@
     margin: 0 auto;
     max-width: 1280px;
     padding: 64px 14px 4px 14px;
+
 }
 
 .submenuIcon{
@@ -22,10 +23,15 @@
     column-gap: 14px;
 
 li a{
-   background-color: white;
+   background-color:    rgba(29, 121, 57, 0.738);
    color: black;
    padding: 8px 14px;
    border-radius: 4px;
+   font-size: 12px;
+  }
+  li a:hover{
+    background-color:  rgba(29, 121, 57, 0.988);
+   color: white;
   }
 }
 
@@ -70,8 +76,7 @@ li a{
             font-weight: bold;
             transition: all 0.8s;
         }
-
-        a:hover{
+      a:hover{
             background-color: black;
             color: white;
         }
