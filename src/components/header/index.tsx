@@ -38,10 +38,10 @@ export function Header(){
                     <Link href="/">
                     Home
                     </Link>
-                    <Link href="/#servicos">
+                    <Link href="/#services">
                     Services
                     </Link>
-                    <Link href="/#contatos">
+                    <Link href="/#contacts">
                     Contacts
                     </Link>
                 </nav>
