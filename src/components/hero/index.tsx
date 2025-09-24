@@ -19,6 +19,7 @@ export function Hero({heading,bannerUrl,buttonTitle,buttonUrl,icon}:HeroProps){
             <h1 className={styles.title}>{heading}</h1>
 
             <a href={buttonUrl}
+            
                 target="_blank"
                 className={styles.link} 
             >

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.scss";
 import { Header } from "@/components/header";
 
+import { ToastContainer } from "react-toastify";
+
 import { Roboto } from 'next/font/google';
 
 const roboto = Roboto({
@@ -15,6 +17,10 @@ export const metadata: Metadata = {
   description: "Your personal house cleaner assistant",
 };
 
+export function ToastProvider() {
+  return <ToastContainer position="top-right" autoClose={3000} theme="dark" />;
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -24,6 +30,7 @@ export default function RootLayout({
     <html lang="en" data-scroll-behavior="smooth">
       <body className={roboto.className}>
        <Header/>
+       <ToastProvider/>
         {children}
       </body>
     </html>

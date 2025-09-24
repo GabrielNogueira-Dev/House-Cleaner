@@ -4,7 +4,7 @@ import styles from "./styles.module.scss"
 import { Clock, Mail, Phone, } from "lucide-react"
 
 
-export function Prefooter({object}: HomeProps){
+export function Contacts({object}: HomeProps){
 
     return(
         <footer id="contacts" className={styles.footer}>

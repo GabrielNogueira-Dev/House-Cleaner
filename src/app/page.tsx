@@ -6,8 +6,11 @@ import { Phone } from "lucide-react";
 import styles from './styles.module.scss'
 import { Services } from "@/components/home/services";
 import { Container } from "@/components/container";
-import { Prefooter } from "@/components/home/prefooter";
+import { Contacts } from "@/components/home/contacts";
 import { Footer } from "@/components/home/footer";
+
+import 'react-toastify/dist/ReactToastify.css';
+
 
 export default async function Home() {
   const {object}: HomeProps = await getDataHome()
@@ -28,7 +31,7 @@ export default async function Home() {
        />
     <Container>
        <Services object={object}/>
-       <Prefooter object={object}/>
+       <Contacts object={object}/>
     </Container>
       <Footer/>
          </main>

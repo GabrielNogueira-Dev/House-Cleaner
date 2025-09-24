@@ -1,5 +1,5 @@
 "use client"
-
+import { toast } from 'react-toastify';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 
@@ -9,6 +9,7 @@ import { db } from "../../../../lib/firebase";
 import { addDoc, collection } from 'firebase/firestore';
 
 import styles from './styles.module.scss'
+
 
 
 interface contactsProps{
@@ -50,11 +51,11 @@ export function Formulary(){
             setName('')
             setEmail('')
             setPhone('')
-            alert('Your data has been sent successfuly, please wait for contact today!')
+            toast.success('Your data has been sent successfuly, please wait for contact today!')
            
         }catch(error){
             console.error(error)
-            alert('An error ocurred, please try again or call us!')
+            toast.error('An error ocurred, please try again or call us!')
         }
     
         setLoading(false)

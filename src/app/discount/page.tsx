@@ -1,11 +1,16 @@
-"use client"
 
 import styles from "./styles.module.scss"
 
 import { Formulary } from "../api/formulary";
 
+import type { Metadata } from "next";
 
-export default function Descont(){
+export const metadata: Metadata = {
+  title: "House Cleaner-Discount",
+  description: "discount for first customer",
+};
+
+export default function Discount(){
 
     return(
        <section className={styles.section}>
