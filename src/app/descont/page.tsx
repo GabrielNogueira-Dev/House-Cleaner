@@ -7,16 +7,55 @@ import { FormEvent } from 'react';
 import styles from "./styles.module.scss"
 import { useState } from 'react';
 
+import { db } from '../../../lib/firebase';
+import { addDoc, collection } from 'firebase/firestore';
+
+interface contactsProps{
+    name:string;
+    email:string;
+    phone:string;
+}
+
 export default function Descont(){
 
-    const [phone, setPhone] = useState('');
     const [loading, setLoading] = useState<boolean>(false);
+    
+    const [name,setName] = useState('')
+    const [email,setEmail] = useState('')
+    const [phone, setPhone] = useState('');
 
 
-function handleSubmit(e:FormEvent) {
+async function handleSubmit(e:FormEvent) {
   e.preventDefault(); 
   setLoading(true);
-  setTimeout(() => setLoading(false), 2000);
+
+    const contacts: contactsProps = {name,email,phone}
+
+    try{ //salvar os contatos
+        await addDoc(collection(db,"contacts"),{
+            ...contacts,
+            timestamp: new Date()
+        });
+
+        //Enviar por email para o cliente do site
+        await fetch('/api/send-lead',{
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(contacts),
+        });
+
+        //Reset all input
+        setName('')
+        setEmail('')
+        setPhone('')
+        alert('Your data has been sent successfuly, please wait for contact today!')
+       
+    }catch(error){
+        console.error(error)
+        alert('An error ocurred, please try again or call us!')
+    }
+
+    setLoading(false)
 }
 
 
@@ -55,12 +94,12 @@ function handleSubmit(e:FormEvent) {
 
             <div className={styles.inputContainer}>
 
-                <input type="text" placeholder="Your Name" required/>
-                <input type="email" placeholder="Your Email" required/>
+                <input type="text" placeholder="Your Name" value={name} onChange={ (e)=> setName(e.target.value)} required/>
+                <input type="email" placeholder="Your Email" value={email} onChange={(e) => setEmail(e.target.value)} required/>
                 <PhoneInput
             country={'us'} // Portugal como padrão
             value={phone}
-            onChange={setPhone}
+            onChange={(value) => setPhone(value)}
             preferredCountries={['pt', 'br', 'us']}
             inputProps={{
               name: 'phone',
