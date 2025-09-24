@@ -1,0 +1,87 @@
+
+.formContainer{
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 30px;
+width: 100%;
+}
+
+.inputContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 50%;
+  font: 10px;
+}
+
+.inputContainer input {
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+.phoneInput {
+  width: 100% !important;
+  padding: 10px 12px 10px 48px !important;
+  font-size: 14px !important;
+  border-radius: 4px !important;
+  border: 1px solid #ccc !important;
+  box-sizing: border-box !important;
+  background-color: white !important;
+  
+}
+
+.button{
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 22px;
+  cursor: pointer;
+  width: 65%;
+  color: #fff;
+  background-color: rgb(133, 137, 176);
+  border-radius: 6px;
+  border: 1px solid #ccc ;
+}
+.loader {
+  width: 18px;
+  height: 18px;
+  border: 3px solid white;
+  border-top: 3px solid transparent;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin: auto;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.textButton{
+  font-weight: bold;
+  font-size: 12px;
+}
+
+@media(min-width: 740px){
+  .button{
+    padding: 12px 24px;
+  }
+  .loader{
+  width: 24px;
+  height: 24px;
+  border: 5px solid white;
+  border-top: 5px solid transparent;
+  }
+  .textButton{
+  font-weight: bold;
+  font-size: 15px;
+}
+}
+
