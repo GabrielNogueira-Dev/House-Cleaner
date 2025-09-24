@@ -32,6 +32,7 @@ export function Hero({heading,bannerUrl,buttonTitle,buttonUrl,icon}:HeroProps){
             priority={true}
             quality={100}
             fill={true}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 60vw"
             className={styles.banner}
           /> 
         </div>

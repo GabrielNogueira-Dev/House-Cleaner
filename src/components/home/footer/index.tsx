@@ -1,44 +1,41 @@
 
-import { HomeProps } from "@/utils/home.type"
+import { FaLinkedin } from "react-icons/fa"
 import styles from "./styles.module.scss"
-import { Clock, Mail, Phone } from "lucide-react"
 
-export function Footer({object}: HomeProps){
+
+export function Footer(){
 
     return(
-        <footer id="contacts" className={styles.footer}>
-            <section className={styles.section}>
-                <h2 className={styles.title}>Contacts</h2>
+          <section className={styles.containergeral}>
+      
+    <div className={styles.grupo}>
 
-                <div className={styles.content}>
+             <div className={styles.containercop}>
 
-                    <div className={styles.item}>
-                       <Mail size={28} color="black"/>
-                       <div>
-                        <strong>Email</strong>
-                        <p>{object.metadata.contact.email}</p>
-                       </div>
+                     <strong className={styles.cop}>©Copyright 2023 Mrs Cleaning - All Rights Reserved</strong>
+
+            </div>
+
+                    <div>
+                        <span className={styles.att}>Updated recently for improved performance and security </span>
                     </div>
 
-                     <div className={styles.item}>
-                       <Phone size={28} color="black"/>
-                       <div>
-                        <strong>Phone</strong>
-                        <p>{object.metadata.contact.phone}</p>
-                       </div>
-                    </div>
+             <div className={styles.containerby}>
 
-                     <div className={styles.item}>
-                       <Clock size={28} color="black"/>
-                       <div>
-                        <strong>Time</strong>
-                        <p>{object.metadata.contact.time}</p>
-                       </div>
-                    </div>
+                <strong><a
+                href="https://www.linkedin.com/in/gabriel-nogueira-2944b5335/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.by}
+                style={{color:"white", textDecoration:"none"}}
+                 >
+                Created by gabriel-nogueira <FaLinkedin style={{ marginLeft: '6px' }} />
+            </a></strong>
 
-                </div>
+              </div>
 
-            </section>
-        </footer>
+    </div>
+     
+     </section> 
     )
 }

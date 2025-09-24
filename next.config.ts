@@ -1,16 +1,15 @@
 import type { NextConfig } from "next";
-import { hostname } from "os";
 
-
-const nextConfig = {
+const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       {
         protocol: 'https',
         hostname: 'cdn.cosmicjs.com',
-        pathname: '/**', // allows all paths
+        pathname: '/**', // permite todas as imagens do CosmicJS
       },
     ],
+    qualities: [100], // permite usar quality={100} nas imagens
   },
 };
 

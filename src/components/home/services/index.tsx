@@ -48,6 +48,7 @@ export function Services({object}:HomeProps){
                     alt='Imagem da empresa'
                     quality={100}
                     fill={true}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 60vw"
                     src={object.metadata.about.banner.url}
                 />
             </div>
@@ -65,6 +66,7 @@ export function Services({object}:HomeProps){
                     alt='Imagem do servico'
                     quality={100}
                     fill={true}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     src={services.image.url}
                 />
                    </div>
@@ -80,6 +82,7 @@ export function Services({object}:HomeProps){
                     alt='Imagem do servico'
                     quality={100}
                     fill={true}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 60vw"
                     src={services.image.url}
                 />
                    </div>

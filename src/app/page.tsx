@@ -6,6 +6,7 @@ import { Phone } from "lucide-react";
 import styles from './styles.module.scss'
 import { Services } from "@/components/home/services";
 import { Container } from "@/components/container";
+import { Prefooter } from "@/components/home/prefooter";
 import { Footer } from "@/components/home/footer";
 
 export default async function Home() {
@@ -27,8 +28,9 @@ export default async function Home() {
        />
     <Container>
        <Services object={object}/>
-       <Footer object={object}/>
+       <Prefooter object={object}/>
     </Container>
+      <Footer/>
          </main>
   );
 }

@@ -21,12 +21,9 @@ interface contactsProps{
 export function Formulary(){
      const [loading, setLoading] = useState<boolean>(false);
         
-        const [name,setName] = useState('')
-        
-        const [phone, setPhone] = useState('');
-    
-            //CONTEXT API
-            const [email,setEmail] = useState('')
+        const [name,setName] = useState('')   
+        const [phone, setPhone] = useState('')
+        const [email,setEmail] = useState('')
     
 
 
