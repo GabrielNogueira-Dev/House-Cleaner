@@ -38,7 +38,7 @@ export function Hero({heading,bannerUrl,buttonTitle,buttonUrl,icon}:HeroProps){
           /> 
         </div>
                 <section className={styles.section}>
-                  <h2 className= {styles.secondTitle}>Discount available for 1st Time Clients. <Link className={styles.linkk} href="/descont">Click here 🎀 </Link></h2>
+                  <h2 className= {styles.secondTitle}>Discount available for 1st Time Clients. <Link className={styles.linkk} href="/discount">Click here 🎀 </Link></h2>
                 </section>
         </main>
     )
