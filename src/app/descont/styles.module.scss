@@ -1,0 +1,155 @@
+.section{
+   padding-top: 64px;
+}
+
+.broomWrapper {
+  position: relative;
+  width: 100%;
+  height: 75px; /* altura da área de varredura */
+  overflow: hidden;
+  background-color: rgb(133, 137, 176);
+}
+
+.broom {
+  position: absolute;
+  top: 0;
+  left: -100px; /* começa fora da tela */
+  width: 100px; /* ajusta conforme o tamanho do GIF */
+  animation: sweepAcross 10s alternate infinite;
+}
+
+@keyframes sweepAcross {
+  0%   { left: -90px; }
+  100% { left: calc(100vw - 100px); }
+}
+
+.divTitle{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(133, 137, 176);
+    padding: 18px;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 16px;
+}
+@media(min-width:764px){
+    .title{
+        font-size: 26px;
+    }
+}
+
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.nav{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(133, 137, 176);
+    color: rgb(251, 242, 226);
+    line-height: 1.4;
+    font-weight: bold;
+    max-width: 75%;
+    gap: 24px;
+    padding: 60px;
+    border-radius: 8px;
+    
+}
+
+
+.formContainer{
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 30px;
+}
+
+.inputContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 50%;
+  font: 10px;
+}
+
+.inputContainer input {
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+.phoneInput {
+  width: 100% !important;
+  padding: 10px 12px 10px 48px !important;
+  font-size: 14px !important;
+  border-radius: 4px !important;
+  border: 1px solid #ccc !important;
+  box-sizing: border-box !important;
+  background-color: white !important;
+  
+}
+
+.button{
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 22px;
+  cursor: pointer;
+  width: 65%;
+  color: #fff;
+  background-color: rgb(133, 137, 176);
+  border-radius: 6px;
+  border: 1px solid #ccc ;
+}
+.loader {
+  width: 18px;
+  height: 18px;
+  border: 3px solid white;
+  border-top: 3px solid transparent;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin: auto;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.textButton{
+  font-weight: bold;
+  font-size: 12px;
+}
+
+@media(min-width: 740px){
+  .button{
+    padding: 12px 24px;
+  }
+  .loader{
+  width: 24px;
+  height: 24px;
+  border: 5px solid white;
+  border-top: 5px solid transparent;
+  }
+  .textButton{
+  font-weight: bold;
+  font-size: 15px;
+}
+}
+

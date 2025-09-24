@@ -1,6 +1,7 @@
 import styles from "./styles.module.scss"
 import Image from "next/image";
 import { ReactNode } from "react";
+import Link from "next/link";
 
 interface HeroProps {
    heading:string;
@@ -34,6 +35,9 @@ export function Hero({heading,bannerUrl,buttonTitle,buttonUrl,icon}:HeroProps){
             className={styles.banner}
           /> 
         </div>
+                <section className={styles.section}>
+                  <h2 className= {styles.secondTitle}>Discount available for 1st Time Clients. <Link className={styles.linkk} href="/descont">Click here 🎀 </Link></h2>
+                </section>
         </main>
     )
 }

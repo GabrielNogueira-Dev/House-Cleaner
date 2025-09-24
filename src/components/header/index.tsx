@@ -20,6 +20,21 @@ export function Header(){
 
     },[top])
 
+     const [vassouramobile, setvassouramobile] = useState(false)
+
+     useEffect(()=>{
+
+        const checkwidth = () => {
+            setvassouramobile(window.innerWidth <405)
+        };
+
+        checkwidth ()
+        window.addEventListener("resize", checkwidth)
+        return () => {
+            window.removeEventListener("resize", checkwidth)
+        }
+
+     },[])
 
     return(
         <header className={`${styles.header} ${!top ? styles.fixed : styles.background}`}>
@@ -28,11 +43,15 @@ export function Header(){
 
             <div className={styles.content}>
 
-                <div className={styles.contentLogo}>
+                {vassouramobile ? ( <div className={styles.contentLogo}>
+                    <Link href="/">
+                      Mrs. Cleaning
+                    </Link>
+                </div>):  <div className={styles.contentLogo}>
                     <Link href="/">
                       Mrs. Cleaning
                     </Link><strong>🧹</strong>
-                </div>
+                </div> }
 
                 <nav className={styles.nav}>
                     <Link href="/">
