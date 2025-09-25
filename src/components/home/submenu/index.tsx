@@ -4,11 +4,16 @@ import Link from "next/link"
 
 import { X, Menu } from "lucide-react"
 import { useEffect, useState } from "react"
+import { MenuProps } from "@/utils/menu.type"
 
-export function Submenu(){
+interface SubMenuProps{
+    menu:MenuProps
+}
+
+export function Submenu({ menu }:SubMenuProps){
 
     const [burguer,setBurguer] = useState(false)
-
+console.log(menu)
     useEffect(()=>{
         const handleResize = ()=> {
             if(window.innerWidth > 768){
@@ -41,16 +46,15 @@ export function Submenu(){
                 </button>
             )}
 
-            <li>
-                <Link href="/post/pagina-1">
-                Page 1
+               {menu.objects.map( item => (
+           
+             <li>
+                 <Link href={`/post/${item.slug}`}>
+                    {item.title}
                 </Link>
             </li>
-            <li>
-                <Link href="/post/pagina-2">
-                Page 2
-                </Link>
-            </li>
+
+               ))}
         </ul>
        </section>
     )

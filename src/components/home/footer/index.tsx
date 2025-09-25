@@ -12,7 +12,7 @@ export function Footer(){
 
              <div className={styles.containercop}>
 
-                     <strong className={styles.cop}>©Copyright 2023 Mrs Cleaning - All Rights Reserved</strong>
+                     <strong className={styles.cop}>©Copyright {new Date().getFullYear()} Mrs Cleaning - All Rights Reserved</strong>
 
             </div>
 

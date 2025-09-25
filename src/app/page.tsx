@@ -1,6 +1,8 @@
 import { Submenu } from "@/components/home/submenu";
-import { getDataHome } from "@/utils/actions/get-data";
+import { getDataHome, getSubirMenu } from "@/utils/actions/get-data";
 import { HomeProps } from "@/utils/home.type";
+import { MenuProps } from "@/utils/menu.type";
+
 import { Hero } from "@/components/hero";
 import { Phone } from "lucide-react";
 import styles from './styles.module.scss'
@@ -17,11 +19,16 @@ export default async function Home() {
 //Ja direciona o obect da api que estaria o data.object
 //console.log(data.object.metadata.heading) por exemplo
 
+const menu: MenuProps = await getSubirMenu()
+//console.log(menu.objects[0])
 
 
   return (
+
         <main className={styles.background}>
-       <Submenu/>
+
+   {menu.objects.length > 0 && <Submenu menu={menu}/>}
+
         <Hero
         heading={object.metadata.heading}
         buttonTitle={object.metadata.cta_button.title}
