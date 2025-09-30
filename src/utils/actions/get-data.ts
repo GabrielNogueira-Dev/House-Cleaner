@@ -1,4 +1,4 @@
-
+import { redirect } from "next/navigation"
 //https://api.cosmicjs.com/v3/buckets/mr-cleaner-production/objects?pretty=true&query=%7B%22type%22:%22pages%22%7D&limit=10&skip=0&read_key=2YIUPJguqPaGUj5gH6zabMDphe36gwi7pfFhJD4r2aBwqwxa&depth=1&props=slug,title,
 
 export async function getDataHome(){
@@ -54,7 +54,7 @@ try{
    return res.json()
 
 }catch(err){
-    throw new Error('Failed get item by slug'+ err)
+    redirect("/")
 }
 
 }

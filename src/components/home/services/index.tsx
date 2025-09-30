@@ -9,8 +9,10 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import { useState, useEffect } from 'react'
 
+import { useRouter } from 'next/navigation'
 
 export function Services({object}:HomeProps){
+        const router = useRouter()
 
     const [ismobile, setIsMobile] = useState<boolean>(false)
 
@@ -34,7 +36,19 @@ export function Services({object}:HomeProps){
             slidesToShow: 3,
             slidesToScroll: 1,
             autoplay: true,
-            autoplaySpeed: 3000  }
+            autoplaySpeed: 3000  
+        }
+
+        function generateSlug(text: string) {
+  return text
+    .toLowerCase()
+    .normalize("NFD") // remove acentos
+    .replace(/[\u0300-\u036f]/g, "") // remove diacríticos
+    .replace(/[^\w\s-]/g, "") // remove emojis e símbolos
+    .trim()
+    .replace(/\s+/g, "-") // troca espaços por hífen
+}
+
 
     return(
         <>
@@ -62,7 +76,10 @@ export function Services({object}:HomeProps){
         
            {ismobile ? (object.metadata.services.map(services => (
                 <article key={services.description} className={styles.service}>
-                   <div className={styles.innerService}>
+                   <div className={styles.innerService} onClick={()=> {
+                    const slug = generateSlug(services.description)
+                    router.push(`/post/${slug}`)
+                   }}>
                      <Image className={styles.imageService}
                     alt='Imagem do servico'
                     quality={100}
@@ -78,7 +95,10 @@ export function Services({object}:HomeProps){
             
              {object.metadata.services.map(services => (
                 <article key={services.description} className={styles.service}>
-                   <div className={styles.innerService}>
+                   <div className={styles.innerService} onClick={()=> {
+                    const slug = generateSlug(services.description)
+                    router.push(`/post/${slug}`)
+                   }}>
                      <Image className={styles.imageService}
                     alt='Imagem do servico'
                     quality={100}
@@ -87,7 +107,7 @@ export function Services({object}:HomeProps){
                     src={services.image.url}
                 />
                    </div>
-                   <p>{services.description}</p>
+                   <p>{services.description} </p>
                 </article>
             ))}
 

@@ -40,7 +40,6 @@ const menu: MenuProps = await getSubirMenu()
        <Services object={object}/>
        <Contacts object={object}/>
     </Container>
-      <Footer/>
          </main>
   );
 }

@@ -13,7 +13,7 @@ interface SubMenuProps{
 export function Submenu({ menu }:SubMenuProps){
 
     const [burguer,setBurguer] = useState(false)
-console.log(menu)
+//console.log(menu)
     useEffect(()=>{
         const handleResize = ()=> {
             if(window.innerWidth > 768){
