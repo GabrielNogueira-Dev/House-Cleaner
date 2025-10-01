@@ -4,8 +4,9 @@ import styles from './styles.module.scss'
 
 import { FormEvent, useState } from 'react'
 import { db } from '../../../lib/firebase'
+import { useRouter } from 'next/navigation'
 
-interface ContactProps{
+export interface ContactProps{
 name:string;
 text:string;
 star:number;
@@ -14,6 +15,7 @@ star:number;
 export default function Avaliation(){
 
         const [loading,setLoading] = useState<boolean>(false)
+        const router = useRouter()
 
     const [name,setName] = useState("")
     const [text,setText] = useState("")
@@ -33,6 +35,7 @@ export default function Avaliation(){
             ...avaliacao,
             timestamp: new Date()
         })
+        router.push("/")
        }catch(err){
         throw new Error("Failed to fetch")
     }  
@@ -49,8 +52,8 @@ export default function Avaliation(){
                  <input type="text" placeholder='Your name' required
                     value={name} onChange={(e) => setName(e.target.value)}
                  />
-                <textarea className={styles.textarea} placeholder='Your feedback' required
-                    value={text} onChange={(e) => setText(e.target.value)}
+                <textarea  maxLength={110} className={styles.textarea} placeholder='Your feedback' required
+                    value={text} onChange={(e) => setText(e.target.value) }
                 />
 
                 <select name="stars" className={styles.stars} required
@@ -66,7 +69,7 @@ export default function Avaliation(){
                 </select>
 
                </section>
-                {loading ? (<button className={styles.sub} type="submit"> Carregando.. </button>) : (<button className={styles.sub} type="submit"> Submit </button>)}
+                {loading ? (<button className={styles.sub} type="submit"> THANK YOU 💞 </button>) : (<button className={styles.sub} type="submit"> Submit </button>)}
             </div>
 
         </form>

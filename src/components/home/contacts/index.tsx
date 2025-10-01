@@ -2,11 +2,13 @@
 import { HomeProps } from "@/utils/home.type"
 import styles from "./styles.module.scss"
 import { Clock, Mail, Phone, } from "lucide-react"
-
+import { FeedbackShow } from "@/app/feedback"
 
 export function Contacts({object}: HomeProps){
 
     return(
+        <>
+            <FeedbackShow/>
         <footer id="contacts" className={styles.footer}>
             <section className={styles.section}>
                 <h2 className={styles.title}>Contacts</h2>
@@ -42,6 +44,6 @@ export function Contacts({object}: HomeProps){
             </section>
                  
         </footer>
-
+</>
 )
 }

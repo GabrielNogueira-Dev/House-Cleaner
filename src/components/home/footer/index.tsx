@@ -2,12 +2,14 @@
 import { FaLinkedin } from "react-icons/fa"
 import styles from "./styles.module.scss"
 
+import { FeedbackShow } from "@/app/feedback"
 
 export function Footer(){
 
     return(
+        
           <section className={styles.containergeral}>
-      
+       
     <div className={styles.grupo}>
 
              <div className={styles.containercop}>

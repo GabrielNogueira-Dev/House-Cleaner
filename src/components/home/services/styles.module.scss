@@ -175,4 +175,27 @@
 
 }
 
-
+.secAvaliation{
+    background-color: rgba(41, 161, 101, 0.43);
+    border-radius: 4px;
+    margin-top: 15px;
+    transition: ease 1.5s;
+    
+}
+.secAvaliation:hover{
+    transform: scale(1.1);
+}
+.avalie{
+    color: white;
+    margin-bottom: 15px;
+    font-size: 15px;
+    display: block;
+    margin: auto;
+    padding: 5px;
+   font-weight: medium;
+}
+.linkk{
+    text-decoration: none;
+    color: wheat;
+    cursor: pointer;
+}

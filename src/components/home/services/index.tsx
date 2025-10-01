@@ -10,6 +10,7 @@ import 'slick-carousel/slick/slick-theme.css'
 import { useState, useEffect } from 'react'
 
 import { useRouter } from 'next/navigation'
+import Link from 'next/link'
 
 export function Services({object}:HomeProps){
         const router = useRouter()
@@ -29,7 +30,7 @@ export function Services({object}:HomeProps){
   return () => window.removeEventListener("resize", handleResize)
 }, []) 
 
-        const carouselImg = { //isso é o slide e suas funções
+       const carouselImg = { //isso é o slide e suas funções
              dots: false,
             infinite: true,
             speed: 500,
@@ -56,6 +57,9 @@ export function Services({object}:HomeProps){
            <article className={styles.innerAbout}>
             <h1 className={styles.title}>🧼 About  </h1>
             <p>{object.metadata.about.description}</p>
+               <div className={styles.secAvaliation}>
+                  <h2 className= {styles.avalie}> To evaluate our cleaning services, <Link className={styles.linkk} href="/avaliation">Click here ⭐️ </Link></h2>
+                </div>
            </article>
 
             <div className={styles.bannerAbout}>
@@ -91,7 +95,7 @@ export function Services({object}:HomeProps){
                    <p>{services.description}</p>
                 </article>
             )))
-        : <Slider {...carouselImg} className={styles.carouselImg}>
+        : <Slider {...carouselImg} className={styles.carousel}>
             
              {object.metadata.services.map(services => (
                 <article key={services.description} className={styles.service}>
@@ -114,6 +118,8 @@ export function Services({object}:HomeProps){
         </Slider>}
        
         </section>
+            
         </> 
+        
     )
 }

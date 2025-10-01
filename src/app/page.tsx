@@ -11,7 +11,8 @@ import { Container } from "@/components/container";
 import { Contacts } from "@/components/home/contacts";
 
 import 'react-toastify/dist/ReactToastify.css';
-import Avaliation from "./avaliation/page";
+
+import { FeedbackShow } from "./feedback";
 
 
 export default async function Home() {

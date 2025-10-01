@@ -1,0 +1,92 @@
+.carouselImg {
+  :global(.slick-slide) {
+    padding: 0 5px; // espaçamento lateral entre os cards
+    display: flex !important;
+    justify-content: center;
+    align-items: stretch;
+  }
+
+  :global(.slick-prev::after)
+  :global(.slick-next::before) {
+    color: rgba(234, 228, 228, 0.738);
+    background-color: transparent;
+    font-size: 28px;
+    opacity: 1;
+  }
+}
+
+.father {
+  width: 90%;
+  background-color: rgba(134, 137, 135, 0.622);
+  box-shadow: 0 6px 20px rgba(30, 68, 63, 0.492);
+  padding: 25px;
+  border-radius: 14px;
+  margin: 0 auto;
+
+  .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    margin-bottom: 20px;
+
+    p {
+      font-size: 16px;
+      text-align: center;
+    }
+  }
+}
+
+.containerFeed {
+  display: grid;
+  grid-template-rows: 1fr auto; // conteúdo + estrelas
+  text-align: center;
+  background-color: white;
+  border-radius: 4px;
+  min-width: 100%;
+  flex: 0 0 auto;
+  height: 220px; // ← altura fixa para todos os cards
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  overflow: hidden;
+  padding: 20px;
+  
+
+  h3 {
+    margin-top: 10px;
+    margin-bottom: 7px;
+  }
+
+  p {
+    margin-bottom: 7px;
+    align-self: center; // centraliza verticalmente dentro do 1fr
+  }
+}
+
+.starDisplay {
+  align-self: end; // alinha estrelas no final do card
+}
+
+/* Responsivo para telas menores */
+@media(max-width: 739px) {
+  .father {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 20px;
+
+    p {
+      font-size: 14px;
+    }
+  }
+
+  .containerFeed {
+    min-width: 100%;
+    padding: 16px;
+    height: 280px;
+   
+  }
+}
