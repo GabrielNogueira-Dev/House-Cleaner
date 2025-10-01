@@ -9,9 +9,9 @@ import styles from './styles.module.scss'
 import { Services } from "@/components/home/services";
 import { Container } from "@/components/container";
 import { Contacts } from "@/components/home/contacts";
-import { Footer } from "@/components/home/footer";
 
 import 'react-toastify/dist/ReactToastify.css';
+import Avaliation from "./avaliation/page";
 
 
 export default async function Home() {

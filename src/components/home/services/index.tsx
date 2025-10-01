@@ -114,7 +114,6 @@ export function Services({object}:HomeProps){
         </Slider>}
        
         </section>
-
         </> 
     )
 }
