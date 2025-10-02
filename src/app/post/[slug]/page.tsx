@@ -8,6 +8,7 @@ import { Container } from '@/components/container'
 import Image from 'next/image'
 
 import { Metadata } from 'next'
+import { redirect } from 'next/navigation'
 
 export async function generateMetadata( props : { 
     params: Promise<{slug:string}>
@@ -51,6 +52,10 @@ export default async function Page( props : {
     const {slug} = await props.params
    const {objects}: PostProps = await getItemBySlug(slug)
     //console.log(JSON.stringify(objects,null,2))
+
+if(!objects || objects.length === 0){
+    redirect("/")
+}
 
     return(
                 <>
