@@ -12,6 +12,35 @@ import { Contacts } from "@/components/home/contacts";
 
 import 'react-toastify/dist/ReactToastify.css';
 
+import { Metadata } from "next"
+
+export const dynamic = "force-dynamic"
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: "Mrs. Cleaning – Limpeza Profissional nos EUA",
+    description: "Serviços de limpeza residencial e comercial com atendimento personalizado.",
+    openGraph: {
+      title: "Mrs. Cleaning – Limpeza Profissional nos EUA",
+      description: "Serviços de limpeza residencial e comercial com atendimento personalizado.",
+      url: "https://house-cleaner.vercel.app/",
+      images: [
+        {
+          url: "https://cdn.cosmicjs.com/84e63dc0-9596-11f0-bba7-d56988718db7-banner01.png",
+          width: 1200,
+          height: 627,
+          alt: "Banner Mrs. Cleaning"
+        }
+      ],
+      type: "website"
+    },
+    robots: {
+      index: true,
+      follow: true
+    }
+  }
+}
+
 
 export default async function Home() {
   const {object}: HomeProps = await getDataHome()

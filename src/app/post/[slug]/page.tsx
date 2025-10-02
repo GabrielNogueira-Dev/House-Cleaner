@@ -24,6 +24,7 @@ export async function generateMetadata( props : {
         description: `${objects[0].metadata.description.text}`,
         openGraph: {
      title: "House Cleaner",
+      url: "https://house-cleaner.vercel.app/",
     images:[`${objects[0].metadata.banner.url}`]
   },
   robots:{
