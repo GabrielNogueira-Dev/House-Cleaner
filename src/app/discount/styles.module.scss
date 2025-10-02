@@ -1,21 +1,25 @@
-.section{
-   padding-top: 64px;
-   height: calc(100vh - 60px);
+.section {
+  padding-top: 64px;
+  min-height: calc(100vh - 64px); // permite crescer com conteúdo
+  display: flex;
+  flex-direction: column;
 }
 
 .broomWrapper {
   position: relative;
   width: 100%;
-  height: 75px; /* altura da área de varredura */
-  overflow: hidden;
+  height: 75px;
+  overflow-x: hidden;
+  overflow-y: visible;
   background-color: rgb(133, 137, 176);
+  z-index: 1;
 }
 
 .broom {
   position: absolute;
   top: 0;
-  left: -100px; /* começa fora da tela */
-  width: 100px; /* ajusta conforme o tamanho do GIF */
+  left: -100px;
+  width: 100px;
   animation: sweepAcross 10s alternate infinite;
 }
 
@@ -24,64 +28,63 @@
   100% { left: calc(100vw - 100px); }
 }
 
-.divTitle{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(133, 137, 176);
-    padding: 18px;
+.divTitle {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(133, 137, 176);
+  padding: 18px;
+  z-index: 2;
 }
 
-.title{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: black;
-    font-size: 16px;
-}
-@media(min-width:764px){
-    .title{
-        font-size: 26px;
-    }
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-size: 16px;
 }
 
-
-.container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 40px;
+@media (min-width: 764px) {
+  .title {
+    font-size: 26px;
+  }
 }
 
-.nav{
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(133, 137, 176);
-    color: rgb(251, 242, 226);
-    line-height: 1.4;
-    font-weight: bold;
-    max-width: 75%;
-    gap: 24px;
-    padding: 60px;
-    border-radius: 8px;
-    
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
 }
 
-
-.formContainer{
-display: flex;
-align-items: center;
-justify-content: center;
-padding: 30px;
+.nav {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(133, 137, 176);
+  color: rgb(251, 242, 226);
+  line-height: 1.4;
+  font-weight: bold;
+  max-width: 75%;
+  gap: 24px;
+  padding: 60px;
+  border-radius: 8px;
 }
 
-.inputContainer{
+.formContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.inputContainer {
   display: flex;
   flex-direction: column;
   gap: 10px;
   width: 50%;
-  font: 10px;
+  font-size: 10px; // corrigido
 }
 
 .inputContainer input {
@@ -101,10 +104,9 @@ padding: 30px;
   border: 1px solid #ccc !important;
   box-sizing: border-box !important;
   background-color: white !important;
-  
 }
 
-.button{
+.button {
   align-self: center;
   display: flex;
   justify-content: center;
@@ -115,8 +117,9 @@ padding: 30px;
   color: #fff;
   background-color: rgb(133, 137, 176);
   border-radius: 6px;
-  border: 1px solid #ccc ;
+  border: 1px solid #ccc;
 }
+
 .loader {
   width: 18px;
   height: 18px;
@@ -133,24 +136,24 @@ padding: 30px;
   }
 }
 
-.textButton{
+.textButton {
   font-weight: bold;
   font-size: 12px;
 }
 
-@media(min-width: 740px){
-  .button{
+@media (min-width: 740px) {
+  .button {
     padding: 12px 24px;
   }
-  .loader{
-  width: 24px;
-  height: 24px;
-  border: 5px solid white;
-  border-top: 5px solid transparent;
-  }
-  .textButton{
-  font-weight: bold;
-  font-size: 15px;
-}
-}
 
+  .loader {
+    width: 24px;
+    height: 24px;
+    border: 5px solid white;
+    border-top: 5px solid transparent;
+  }
+
+  .textButton {
+    font-size: 15px;
+  }
+}
