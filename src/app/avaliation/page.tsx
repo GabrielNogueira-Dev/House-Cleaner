@@ -49,7 +49,7 @@ export default function Avaliation(){
                 <h1 className={styles.title}>Your avaliation is great for us, Thank you!</h1>
                <section className={styles.inputs}>
 
-                 <input type="text" placeholder='Your name' required
+                 <input type="text" placeholder='Your name and Surname' required className={styles.captalize}
                     value={name} onChange={(e) => setName(e.target.value)}
                  />
                 <textarea  maxLength={110} className={styles.textarea} placeholder='Your feedback' required

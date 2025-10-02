@@ -4,6 +4,7 @@
     display: flex !important;
     justify-content: center;
     align-items: stretch;
+    min-width: 0;
   }
 
   :global(.slick-prev::after)
@@ -43,8 +44,8 @@
   text-align: center;
   background-color: white;
   border-radius: 4px;
-  min-width: 100%;
-  flex: 0 0 auto;
+  max-width: 320px;
+  min-width: 280px;
   height: 220px; // ← altura fixa para todos os cards
   box-sizing: border-box;
   overflow-wrap: break-word;
