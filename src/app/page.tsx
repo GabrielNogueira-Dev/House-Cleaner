@@ -12,6 +12,8 @@ import { Contacts } from "@/components/home/contacts";
 
 import 'react-toastify/dist/ReactToastify.css';
 
+
+
 import { Metadata } from "next"
 
 export const dynamic = "force-dynamic"
@@ -26,7 +28,7 @@ export async function generateMetadata(): Promise<Metadata> {
       url: "https://house-cleaner.vercel.app/",
       images: [
         {
-          url: "https://cdn.cosmicjs.com/84e63dc0-9596-11f0-bba7-d56988718db7-banner01.png",
+          url: "https://house-cleaner.vercel.app/opengp.jpg" ,
           width: 1200,
           height: 627,
           alt: "Banner Mrs. Cleaning"
