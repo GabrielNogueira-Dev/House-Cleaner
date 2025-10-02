@@ -12,8 +12,6 @@ import { Contacts } from "@/components/home/contacts";
 
 import 'react-toastify/dist/ReactToastify.css';
 
-import { FeedbackShow } from "./feedback";
-
 
 export default async function Home() {
   const {object}: HomeProps = await getDataHome()
