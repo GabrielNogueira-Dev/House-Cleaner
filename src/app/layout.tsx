@@ -34,15 +34,17 @@ export const metadata: Metadata = {
   }
 };
 
-export function ToastProvider() {
-  return <ToastContainer position="top-right" autoClose={3000} theme="dark" />;
-}
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  
+    function ToastProvider() {
+      return <ToastContainer position="top-right" autoClose={3000} theme="dark" />;
+    }
+
   return (
     <html lang="en" data-scroll-behavior="smooth">
       <body className={roboto.className}>
