@@ -10,18 +10,13 @@ import Image from 'next/image'
 import { Metadata } from 'next'
 
 export async function generateMetadata( props : { 
-    params: {slug:string}
+    params: Promise<{slug:string}>
 }): Promise<Metadata>{
 
+    const {slug} = await props.params
+
     try{
-        const {slug} = props.params
      const { objects } = await getItemBySlug(slug)
-      .catch(()=>{
-           return{
-            title:"House Cleaner",
-            description: "Your personal house cleaner assistant"
-           }
-      })
 
       return{
         title:`House Cleaner - ${objects[0].title}`,
@@ -51,9 +46,9 @@ export async function generateMetadata( props : {
 }
 
 export default async function Page( props : {
-    params: {slug:string}
+    params: Promise<{slug:string}>
 }){
-    const {slug} = props.params
+    const {slug} = await props.params
    const {objects}: PostProps = await getItemBySlug(slug)
     //console.log(JSON.stringify(objects,null,2))
 
