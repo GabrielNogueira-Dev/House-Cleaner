@@ -6,6 +6,7 @@ import styles from './styles.module.scss'
 
 import Slider from "react-slick"
 
+
 interface feedbacks{
     id:string;
     name:string;
@@ -43,40 +44,35 @@ export function FeedbackShow(){
 fetchData()
     },[])
 
-             const carouselImg = {
-                     dots: false,
-                      infinite: true,
-                       speed: 500,
-                        slidesToShow: 3,
-                         slidesToScroll: 1,
-                          autoplay: true,
-                           autoplaySpeed: 3000,
-                             responsive:[
-                                {
-                                    breakpoint:1025,
-                                     settings: {
-                                      slidesToShow:2
-                                    }
-                                },{
-                                    breakpoint:768,
-                                    settings: {
-                                        slidesToShow:2
-                                    }
-                                },
-                                 {
-                                    breakpoint:480,
-                                     settings: {
-                                        slidesToShow:1
-                                     }
-                                 }
-                             ]
-                                                  }
+
+            const carouselImg = {
+  dots: false,
+  infinite: true,
+  speed: 500,
+  slidesToScroll: 1,
+  slidesToShow: 3,
+  autoplay: true,
+  autoplaySpeed: 3000,
+  responsive: [
+    
+    {
+      breakpoint: 1050,
+      settings: { slidesToShow: 2 }
+    },
+    {
+      breakpoint: 640,
+      settings: { slidesToShow: 1 }
+    }
+  ]
+}
+
 
     
     return(
         <>
         <div className={styles.father}>
         <strong className={styles.title}>Avaliations <p>👇🏼</p></strong>
+        
         <Slider {...carouselImg} className={styles.carouselImg}>
     
         {feedbackShow.length >0 && (
