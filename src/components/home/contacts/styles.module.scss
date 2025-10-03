@@ -39,6 +39,10 @@
     display: flex;
     gap: 14px;
     align-items: center;
+    p{
+        color: white;
+        outline: none;
+    }
 }
 
 @media(min-width: 640px){
