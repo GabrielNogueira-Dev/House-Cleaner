@@ -16,7 +16,7 @@ export function Contacts({object}: HomeProps){
                 <div className={styles.content}>
 
                     <div className={styles.item}>
-                       <Mail size={28} color="black"/>
+                       <Mail size={28} color="white"/>
                        <div>
                         <strong>Email</strong>
                         <p>{object.metadata.contact.email}</p>
@@ -24,7 +24,7 @@ export function Contacts({object}: HomeProps){
                     </div>
 
                      <div className={styles.item}>
-                       <Phone size={28} color="black"/>
+                       <Phone size={28} color="white"/>
                        <div>
                         <strong>Phone</strong>
                         <p>{object.metadata.contact.phone}</p>
@@ -32,7 +32,7 @@ export function Contacts({object}: HomeProps){
                     </div>
 
                      <div className={styles.item}>
-                       <Clock size={28} color="black"/>
+                       <Clock size={28} color="white"/>
                        <div>
                         <strong>Time</strong>
                         <p>{object.metadata.contact.time}</p>

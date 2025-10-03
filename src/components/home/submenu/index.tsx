@@ -34,7 +34,7 @@ export function Submenu({ menu }:SubMenuProps){
     return(
        <section className={styles.submenu}>
             <div className={styles.submenuIcon} onClick={toggleMenu}>
-                <Menu size={34} color="black"/> Menu
+                <Menu size={34} color="black"/> Services
             </div>
 
         <ul className={`${styles.ul} ${burguer ? styles.open : ""}`}>
