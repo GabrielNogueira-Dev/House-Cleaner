@@ -3,8 +3,9 @@
     padding: 0 5px; // espaçamento lateral entre os cards
     display: flex !important;
     justify-content: center;
-    align-items: stretch;
+   
     min-width: 0;
+    overflow: hidden;
   }
 
   :global(.slick-prev::after)
@@ -43,6 +44,7 @@
   grid-template-rows: 1fr auto; // conteúdo + estrelas
   text-align: center;
   background-color: white;
+  opacity: 95%;
   border-radius: 4px;
   max-width: 320px;
   min-width: 280px;
@@ -60,7 +62,7 @@
   }
 
   p {
-    margin-bottom: 7px;
+    margin: 10px 0;
     align-self: center; // centraliza verticalmente dentro do 1fr
   }
 }
