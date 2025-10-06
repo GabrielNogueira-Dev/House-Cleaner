@@ -53,7 +53,7 @@ export function Services({object}:HomeProps){
 
     return(
         <>
-        <section className={styles.containerAbout} id= "services">
+        <section className={styles.containerAbout} id='about'>
            <article className={styles.innerAbout}>
             <h1 className={styles.title}>🧼 About  </h1>
             <p>{object.metadata.about.description}</p>
@@ -76,7 +76,7 @@ export function Services({object}:HomeProps){
 
         <h2 className={styles.servicesTitle}>Meeting our services</h2>
 
-        <section className={styles.services}>
+        <section className={styles.services} id='services'>
         
            {ismobile ? (object.metadata.services.map(services => (
                 <article key={services.description} className={styles.service}>
